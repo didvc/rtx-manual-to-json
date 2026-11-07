@@ -117,7 +117,7 @@ cd assets/src && for f in pipeline mapping models; do typst compile --root .. --
 ## Tests
 
 ```bash
-node --test 'test/*.test.mjs'
+node --test test/*.test.mjs
 ```
 
 ## Legal
