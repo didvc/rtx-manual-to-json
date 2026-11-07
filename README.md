@@ -1,6 +1,6 @@
 # rtx-manual-to-json
 
-Converts the Yamaha RTX router command reference HTML archive (`Cmdref_HTML_Archive.zip`) into structured JSON: syntax tokens, parameters, defaults, tables, examples, and the applicable models for each command.
+Converts the Yamaha RTX router command reference HTML archive (`Cmdref_HTML_Archive.zip`) into structured JSON. Each command keeps its syntax as tokens, its parameters with their defaults, and the list of models it applies to.
 
 Plain Node.js ESM. No dependencies, no build step.
 
@@ -122,13 +122,23 @@ node --test test/*.test.mjs
 
 ## Legal
 
-"Yamaha" and "RTX" are registered trademarks of Yamaha Corporation. This project is independent and has no affiliation with, endorsement from, or sponsorship by Yamaha Corporation.
+"Yamaha" and "RTX" are registered trademarks of Yamaha Corporation.
 
-The command reference content is © Yamaha Corporation. This repository contains only converter code. No reference data is included or distributed. Download the archive yourself from the official site and follow its terms of use.
+rtx-manual-to-json is an independent community project. It is not a Yamaha product, and Yamaha Corporation has no affiliation with it and has not endorsed or sponsored it. To avoid confusion, please do not contact Yamaha Corporation about this tool.
+
+The command reference is © Yamaha Corporation. All Rights Reserved. This repository holds converter code, synthetic test fixtures and diagrams. It contains no data parsed from the reference and distributes none. You bring your own data: download the HTML archive yourself from the official source, https://www.rtpro.yamaha.co.jp/RT/manual/rt-common/.
+
+By using this tool, you agree to follow Yamaha Corporation's terms of use for its documentation, as published on the RTpro site.
 
 ## Disclaimer
 
-This software is provided "as is", without warranty. The parser may drop or misread content, and errors in the source documents carry through unchanged. Do not apply configuration derived from this output to production equipment without checking it against the official documentation and testing it first.
+This tool is provided "as is", without warranty of any kind. The parser is not guaranteed to be free of errors, and its output may not represent every command, parameter or constraint in the source correctly. A parsing bug can drop, truncate or misformat content.
+
+The output is derived entirely from Yamaha's HTML. Errors, typos and outdated information in the source, such as firmware changes the reference does not yet reflect, pass into the output unchanged. This project is not responsible for inaccuracies in the upstream documents.
+
+The commands in the reference configure network infrastructure. Do not apply a command or configuration taken from this output to a production network until you have checked it against the official Yamaha documentation and tested it outside production. Feeding the output to an LLM, a RAG system or an agentic pipeline adds hallucination risk on top of this.
+
+The developer is not liable for any damages arising from the use of this tool or its output, including but not limited to network downtime, data loss and security breaches.
 
 ## License
 
