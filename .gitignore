@@ -1,0 +1,18 @@
+# Yamaha HTML archive (download it yourself, never commit)
+Cmdref*/
+Cmdref*.zip
+
+# Generated output
+rtx-commands.json
+rtx-commands.jsonl
+out/
+
+# Personal / local-only files
+.personal/
+
+# Editor / OS
+.DS_Store
+*.swp
+
+# Local backup config
+.kopiaignore
